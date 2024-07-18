@@ -28,419 +28,436 @@
   <body>
     <header>
       <h1 class="name">Hussein Kandil</h1>
-      <img
-        class="personal-img"
-        src="./assets/images/IMG_8460-Edit.tif_1.jpg"
-        alt="Portrait of Hussein Kandil"
-        width="128"
-      />
+
+      <picture>
+        <source
+          media="(max-width: 720px)"
+          srcset="./assets/images/hussein-kandil-480w.jpg"
+        />
+        <img
+          class="personal-img close-shot"
+          src="./assets/images/hussein-kandil-1024.jpg"
+          alt="Close portrait of Hussein Kandil"
+          width="128"
+        />
+      </picture>
+
       <article class="about" aria-labelledby="about-head">
         <h2 class="about-head" id="about-head">About me</h2>
         <p class="about-content">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti
-          dignissimos temporibus ex aspernatur? Blanditiis, illum, ut magni amet
-          saepe repellendus corrupti dolorem, corporis nulla facere doloremque
-          distinctio quibusdam ullam quidem.
+          I am a self-taught programmer
+          <a
+            href="https://www.behance.net/HusseinMahmoud/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            with a background in photography and photo
+            retouching/manipulation</a
+          >, studying computer science and programming courses regularly since
+          late 2021.
         </p>
-        <section class="about-links" aria-label="Links">
-          <button type="button" class="icon-btn">
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub account (Opens in new tab)"
-            >
-              <img
-                src="./assets/icons/github-original.svg"
-                alt=""
-                width="20"
-                height="20"
-              />
-            </a>
-          </button>
-          <button type="button" class="icon-btn">
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="X (Formerly Twitter) account (Opens in new tab)"
-            >
-              <img
-                src="./assets/icons/twitter-original.svg"
-                alt=""
-                width="20"
-                height="20"
-              />
-            </a>
-          </button>
+        <section class="about-links" aria-label="Personal accounts">
+          <a
+            class="link-icon"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub account (Opens in new tab)"
+          >
+            <img
+              src="./assets/icons/github-original.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+          <a
+            class="link-icon"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X (Formerly Twitter) account (Opens in new tab)"
+          >
+            <img
+              src="./assets/icons/twitter-original.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
         </section>
       </article>
     </header>
+
     <main>
       <h2 class="my-work-head" id="my-work-head">My work</h2>
       <section class="my-work-section" aria-labelledby="my-work-head">
-        <article class="project-card" aria-labelledby="project-1-name">
+        <article class="project-card" aria-labelledby="odin-tic-tac-toe">
           <img
-            src="#"
-            alt="screenshot of project 1"
+            src="./assets/images/odin-tic-tac-toe-720w.jpg"
+            alt="Screenshot of the Odin Tic Tac Toe game"
             class="project-img"
             width="150"
           />
-          <section class="project-info" aria-label="Project 1 description">
-            <h3 class="project-name" id="project-1-name">Project name</h3>
+          <section
+            class="project-info"
+            aria-label="Odin Tic Tac Toe description"
+          >
+            <h3 class="project-name" id="odin-tic-tac-toe">Odin Tic Tac Toe</h3>
             <div class="project-links">
-              <button type="button" class="icon-btn">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Project 1 GitHub repository (Opens in new tab)"
-                >
-                  <img
-                    src="./assets/icons/github-original.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </a></button
-              ><button type="button" class="icon-btn">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit project 1 (Opens in new tab)"
-                >
-                  <img
-                    src="./assets/icons/open-in-new.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </a>
-              </button>
+              <a
+                class="link-icon"
+                href="https://github.com/hussein-m-kandil/top-javascript-study/tree/main/odin-tic-tac-toe/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Odin Tic Tac Toe GitHub repository (Opens in new tab)"
+              >
+                <img
+                  src="./assets/icons/github-original.svg"
+                  alt="GitHub icon"
+                  width="20"
+                  height="20"
+                />
+              </a>
+              <a
+                class="link-icon"
+                href="https://hussein-m-kandil.github.io/top-javascript-study/dist/odin-tic-tac-toe.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Odin Tic Tac Toe (Opens in new tab)"
+              >
+                <img
+                  src="./assets/icons/open-in-new.svg"
+                  alt="Follow link icon"
+                  width="20"
+                  height="20"
+                />
+              </a>
             </div>
             <p class="project-description">
-              Short description of the project. Just a couple sentences will do.
+              Tic Tac Toe game built using HTML, CSS, and vanilla JavaScript. I
+              built it while studying The Odin Project JavaScript course.
             </p>
           </section>
         </article>
-        <article class="project-card" aria-labelledby="project-2-name">
+
+        <article class="project-card" aria-labelledby="odin-restaurant-page">
           <img
-            src="#"
-            alt="screenshot of project 2"
+            src="./assets/images/odin-restaurant-page-720w.jpg"
+            alt="Screenshot of the Odin Restaurant Page"
             class="project-img"
             width="150"
           />
-          <section class="project-info" aria-label="Project 2 description">
-            <h3 class="project-name" id="project-2-name">Project name</h3>
+          <section
+            class="project-info"
+            aria-label="Odin Restaurant Page description"
+          >
+            <h3 class="project-name" id="odin-restaurant-page">
+              Odin Restaurant Page
+            </h3>
             <div class="project-links">
-              <button type="button" class="icon-btn">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Project 2 GitHub repository (Opens in new tab)"
-                >
-                  <img
-                    src="./assets/icons/github-original.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </a></button
-              ><button type="button" class="icon-btn">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit project 2 (Opens in new tab)"
-                >
-                  <img
-                    src="./assets/icons/open-in-new.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </a>
-              </button>
+              <a
+                class="link-icon"
+                href="https://github.com/hussein-m-kandil/top-javascript-study/tree/main/odin-restaurant-page/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Odin Restaurant Page GitHub repository (Opens in new tab)"
+              >
+                <img
+                  src="./assets/icons/github-original.svg"
+                  alt="GitHub icon"
+                  width="20"
+                  height="20"
+                />
+              </a>
+              <a
+                class="link-icon"
+                href="https://hussein-m-kandil.github.io/top-javascript-study/dist/odin-restaurant-page.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Odin Restaurant Page (Opens in new tab)"
+              >
+                <img
+                  src="./assets/icons/open-in-new.svg"
+                  alt="Follow link icon"
+                  width="20"
+                  height="20"
+                />
+              </a>
             </div>
             <p class="project-description">
-              Short description of the project. Just a couple sentences will do.
+              Restaurant page built using HTML, CSS, and vanilla JavaScript. I
+              built it while studying The Odin Project JavaScript course.
             </p>
           </section>
         </article>
-        <article class="project-card" aria-labelledby="project-3-name">
+
+        <article class="project-card" aria-labelledby="odin-todo-list">
           <img
-            src="#"
-            alt="screenshot of project 3"
+            src="./assets/images/odin-todo-list-720w.jpg"
+            alt="Screenshot of the Odin Todo List app"
             class="project-img"
             width="150"
           />
-          <section class="project-info" aria-label="Project 3 description">
-            <h3 class="project-name" id="project-3-name">Project name</h3>
+          <section class="project-info" aria-label="Odin Todo List description">
+            <h3 class="project-name" id="odin-todo-list">Odin Todo List</h3>
             <div class="project-links">
-              <button type="button" class="icon-btn">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Project 3 GitHub repository (Opens in new tab)"
-                >
-                  <img
-                    src="./assets/icons/github-original.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </a></button
-              ><button type="button" class="icon-btn">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit project 3 (Opens in new tab)"
-                >
-                  <img
-                    src="./assets/icons/open-in-new.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </a>
-              </button>
+              <a
+                class="link-icon"
+                href="https://github.com/hussein-m-kandil/top-javascript-study/tree/main/odin-todo-list/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Odin Todo List GitHub repository (Opens in new tab)"
+              >
+                <img
+                  src="./assets/icons/github-original.svg"
+                  alt="GitHub icon"
+                  width="20"
+                  height="20"
+                />
+              </a>
+              <a
+                class="link-icon"
+                href="https://hussein-m-kandil.github.io/top-javascript-study/dist/odin-todo-list.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Odin Todo List (Opens in new tab)"
+              >
+                <img
+                  src="./assets/icons/open-in-new.svg"
+                  alt="Follow link icon"
+                  width="20"
+                  height="20"
+                />
+              </a>
             </div>
             <p class="project-description">
-              Short description of the project. Just a couple sentences will do.
+              Todo List app built using HTML, CSS, and vanilla JavaScript. I
+              built it while studying The Odin Project JavaScript course.
             </p>
           </section>
         </article>
-        <article class="project-card" aria-labelledby="project-4-name">
+
+        <article class="project-card" aria-labelledby="odin-weather-app">
           <img
-            src="#"
-            alt="screenshot of project 4"
+            src="./assets/images/odin-weather-app-720w.jpg"
+            alt="Screenshot of the Odin Weather App displaying current weather information"
             class="project-img"
             width="150"
           />
-          <section class="project-info" aria-label="Project 4 description">
-            <h3 class="project-name" id="project-4-name">Project name</h3>
+          <section
+            class="project-info"
+            aria-label="Odin Weather App description"
+          >
+            <h3 class="project-name" id="odin-weather-app">Odin Weather App</h3>
             <div class="project-links">
-              <button type="button" class="icon-btn">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Project 4 GitHub repository (Opens in new tab)"
-                >
-                  <img
-                    src="./assets/icons/github-original.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </a></button
-              ><button type="button" class="icon-btn">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit project 4 (Opens in new tab)"
-                >
-                  <img
-                    src="./assets/icons/open-in-new.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </a>
-              </button>
+              <a
+                class="link-icon"
+                href="https://github.com/hussein-m-kandil/top-javascript-study/tree/main/odin-weather-app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Odin Weather App GitHub repository (Opens in new tab)"
+              >
+                <img
+                  src="./assets/icons/github-original.svg"
+                  alt="GitHub icon"
+                  width="20"
+                  height="20"
+                />
+              </a>
+              <a
+                class="link-icon"
+                href="https://hussein-m-kandil.github.io/top-javascript-study/dist/odin-weather-app.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Odin Weather App (Opens in new tab)"
+              >
+                <img
+                  src="./assets/icons/open-in-new.svg"
+                  alt="Follow link icon"
+                  width="20"
+                  height="20"
+                />
+              </a>
             </div>
             <p class="project-description">
-              Short description of the project. Just a couple sentences will do.
+              Weather app built using HTML, CSS, and vanilla JavaScript. I built
+              it while studying The Odin Project JavaScript course.
             </p>
           </section>
         </article>
-        <article class="project-card" aria-labelledby="project-5-name">
+
+        <article class="project-card" aria-labelledby="odin-knights-travails">
           <img
-            src="#"
-            alt="screenshot of project 5"
+            src="./assets/images/odin-knights-travails-720w.jpg"
+            alt="Screenshot of the Odin Knights Travails game"
             class="project-img"
             width="150"
           />
-          <section class="project-info" aria-label="Project 5 description">
-            <h3 class="project-name" id="project-5-name">Project name</h3>
+          <section
+            class="project-info"
+            aria-label="Odin Knights Travails description"
+          >
+            <h3 class="project-name" id="odin-knights-travails">
+              Odin Knights Travails
+            </h3>
             <div class="project-links">
-              <button type="button" class="icon-btn">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Project 5 GitHub repository (Opens in new tab)"
-                >
-                  <img
-                    src="./assets/icons/github-original.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </a></button
-              ><button type="button" class="icon-btn">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit project 5 (Opens in new tab)"
-                >
-                  <img
-                    src="./assets/icons/open-in-new.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </a>
-              </button>
+              <a
+                class="link-icon"
+                href="https://github.com/hussein-m-kandil/top-javascript-study/tree/main/odin-knights-travails/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Odin Knights Travails GitHub repository (Opens in new tab)"
+              >
+                <img
+                  src="./assets/icons/github-original.svg"
+                  alt="GitHub icon"
+                  width="20"
+                  height="20"
+                />
+              </a>
+              <a
+                class="link-icon"
+                href="https://hussein-m-kandil.github.io/top-javascript-study/dist/odin-knights-travails.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Odin Knights Travails (Opens in new tab)"
+              >
+                <img
+                  src="./assets/icons/open-in-new.svg"
+                  alt="Follow link icon"
+                  width="20"
+                  height="20"
+                />
+              </a>
             </div>
             <p class="project-description">
-              Short description of the project. Just a couple sentences will do.
+              Knights Travails game built using HTML, CSS, and vanilla
+              JavaScript. I built it while studying The Odin Project JavaScript
+              course.
             </p>
           </section>
         </article>
-        <article class="project-card" aria-labelledby="project-6-name">
+
+        <article class="project-card" aria-labelledby="odin-battleship">
           <img
-            src="#"
-            alt="screenshot of project 6"
+            src="./assets/images/odin-battleship-720w.jpg"
+            alt="Screenshot of the Odin Battleship game"
             class="project-img"
             width="150"
           />
-          <section class="project-info" aria-label="Project 6 description">
-            <h3 class="project-name" id="project-6-name">Project name</h3>
+          <section
+            class="project-info"
+            aria-label="Odin Battleship description"
+          >
+            <h3 class="project-name" id="odin-battleship">Odin Battleship</h3>
             <div class="project-links">
-              <button type="button" class="icon-btn">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Project 6 GitHub repository (Opens in new tab)"
-                >
-                  <img
-                    src="./assets/icons/github-original.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </a></button
-              ><button type="button" class="icon-btn">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit project 6 (Opens in new tab)"
-                >
-                  <img
-                    src="./assets/icons/open-in-new.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </a>
-              </button>
+              <a
+                class="link-icon"
+                href="https://github.com/hussein-m-kandil/top-javascript-study/tree/main/odin-battleship/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Odin Battleship GitHub repository (Opens in new tab)"
+              >
+                <img
+                  src="./assets/icons/github-original.svg"
+                  alt="GitHub icon"
+                  width="20"
+                  height="20"
+                />
+              </a>
+              <a
+                class="link-icon"
+                href="https://hussein-m-kandil.github.io/top-javascript-study/dist/odin-battleship.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Odin Battleship (Opens in new tab)"
+              >
+                <img
+                  src="./assets/icons/open-in-new.svg"
+                  alt="Follow link icon"
+                  width="20"
+                  height="20"
+                />
+              </a>
             </div>
             <p class="project-description">
-              Short description of the project. Just a couple sentences will do.
-            </p>
-          </section>
-        </article>
-        <article class="project-card" aria-labelledby="project-7-name">
-          <img
-            src="#"
-            alt="screenshot of project 7"
-            class="project-img"
-            width="150"
-          />
-          <section class="project-info" aria-label="Project 7 description">
-            <h3 class="project-name" id="project-7-name">Project name</h3>
-            <div class="project-links">
-              <button type="button" class="icon-btn">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Project 7 GitHub repository (Opens in new tab)"
-                >
-                  <img
-                    src="./assets/icons/github-original.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </a></button
-              ><button type="button" class="icon-btn">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit project 7 (Opens in new tab)"
-                >
-                  <img
-                    src="./assets/icons/open-in-new.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </a>
-              </button>
-            </div>
-            <p class="project-description">
-              Short description of the project. Just a couple sentences will do.
-            </p>
-          </section>
-        </article>
-        <article class="project-card" aria-labelledby="project-8-name">
-          <img
-            src="#"
-            alt="screenshot of project 8"
-            class="project-img"
-            width="150"
-          />
-          <section class="project-info" aria-label="Project 8 description">
-            <h3 class="project-name" id="project-8-name">Project name</h3>
-            <div class="project-links">
-              <button type="button" class="icon-btn">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Project 8 GitHub repository (Opens in new tab)"
-                >
-                  <img
-                    src="./assets/icons/github-original.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </a></button
-              ><button type="button" class="icon-btn">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit project 8 (Opens in new tab)"
-                >
-                  <img
-                    src="./assets/icons/open-in-new.svg"
-                    alt=""
-                    width="20"
-                    height="20"
-                  />
-                </a>
-              </button>
-            </div>
-            <p class="project-description">
-              Short description of the project. Just a couple sentences will do.
+              Battleship game built using HTML, CSS, and vanilla JavaScript. I
+              built it while studying The Odin Project JavaScript course.
             </p>
           </section>
         </article>
       </section>
     </main>
-    <footer></footer>
+
+    <footer>
+      <article aria-labelledby="contacts-head">
+        <h2 id="contacts-head">Contact me</h2>
+        <p>
+          Please get in touch if you think our work could be mutually beneficial
+        </p>
+        <p>Giza, Egypt</p>
+        <p>
+          <img
+            src="./assets/icons/phone-outline.svg"
+            alt="Phone icon"
+            width="20"
+            height="20"
+          />
+          <span>01099517979</span>
+        </p>
+        <p>
+          <img
+            src="./assets/icons/email-outline.svg"
+            alt="Email icon"
+            width="20"
+            height="20"
+          />
+          <span>husseinmahmoudkandil@gmail.com</span>
+        </p>
+        <section class="about-links" aria-label="Personal accounts">
+          <a
+            class="link-icon"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub account (Opens in new tab)"
+          >
+            <img
+              src="./assets/icons/github-original.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+          <a
+            class="link-icon"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X (Formerly Twitter) account (Opens in new tab)"
+          >
+            <img
+              src="./assets/icons/twitter-original.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+        </section>
+      </article>
+      <picture>
+        <source
+          media="(max-width: 720px)"
+          srcset="./assets/images/hussein-kandil-medium-portrait-480w.jpg"
+        />
+        <img
+          class="personal-img medium-shot"
+          src="./assets/images/hussein-kandil-medium-portrait-1024w.jpg"
+          alt="Medium portrait of Hussein Kandil"
+          width="128"
+        />
+      </picture>
+    </footer>
   </body>
 </html>
