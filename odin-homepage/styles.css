@@ -198,8 +198,10 @@
 }
 
 :root {
-  --accent-color: hsl(197, 75%, 35%);
+  /* --accent-color: hsl(197, 75%, 35%); */
+  --accent-color: hsl(50, 100%, 50%);
   --secondary-font-color: #555;
+  --card-box-shadow: 2px 2px 3px 0 #0002;
 }
 
 html {
@@ -232,16 +234,16 @@ h6 {
 }
 
 h1 {
-  font-size: 4.25rem;
+  font-size: 2.5rem;
   font-weight: normal;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 a,
@@ -259,6 +261,7 @@ img {
 
 body {
   margin: 0;
+  background-color: #fff;
   max-width: 720px;
   margin: 0 auto;
 }
@@ -266,6 +269,10 @@ body {
 body > header,
 body > main {
   padding: 1rem;
+}
+
+body > main {
+  margin: 3rem auto;
 }
 
 body > header {
@@ -276,13 +283,16 @@ body > header::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 50%;
+  left: calc((100vw - 100%) / -2);
+  right: calc((100vw - 100%) / -2);
+  height: 100%;
   z-index: -1;
   background-color: var(--accent-color);
-  transform-origin: bottom center;
-  transform: skewY(-25deg) scaleY(1.5) translateY(-15%);
+  clip-path: polygon(0 0, 100% 0, 100% 25%, 0 50%);
+}
+
+.personal-info {
+  background-color: #fff;
 }
 
 .personal-info > header {
@@ -293,7 +303,7 @@ body > header::before {
   text-align: right;
   color: #fff;
   background: linear-gradient(0deg, #000, transparent);
-  text-shadow: 2px 3px 5px #0007;
+  text-shadow: 2px 2px 3px #0005;
   padding: 2rem 1rem 0;
   position: absolute;
   margin: 0;
@@ -304,11 +314,7 @@ body > header::before {
 .personal-info .personal-img {
   width: 100%;
   height: auto;
-  box-shadow: 5px 10px 7px 0 #0004;
-}
-
-.about {
-  background-color: #fff;
+  box-shadow: var(--card-box-shadow);
 }
 
 .about-head {
@@ -318,9 +324,10 @@ body > header::before {
 
 .about-content {
   margin: 0.75rem 0 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   line-height: 1.5;
   color: var(--secondary-font-color);
+  font-weight: 300;
 }
 
 .about-content a {
@@ -344,7 +351,7 @@ body > header::before {
 }
 
 .project-card {
-  box-shadow: 2px 5px 7px 0 #0004;
+  box-shadow: var(--card-box-shadow);
   margin-bottom: 4rem;
 }
 
@@ -377,11 +384,25 @@ body > header::before {
   columns: 1 / 3;
   color: var(--secondary-font-color);
   font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.35;
 }
 
 body > footer {
+  position: relative;
+  max-height: 100vh;
+  max-height: 100svh;
+}
+
+body > footer::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: calc((100vw - 100%) / -2);
+  right: calc((100vw - 100%) / -2);
+  z-index: -1;
   background-color: var(--accent-color);
-  color: #eee;
 }
 
 body > footer > article {
@@ -395,20 +416,16 @@ body > footer > article > header > h2 {
 
 body > footer > article > main > p {
   font-size: 1rem;
+  margin: 2rem 0;
 }
 
 body > footer > article > main > p:first-of-type {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 body > footer > article > main > p > img {
   margin: 0 0.25rem;
-  filter: invert() brightness(0.9);
-}
-
-body > footer > article > footer a > img {
-  width: 48px;
-  height: 48px;
 }
 
 body > footer > picture > img {
@@ -418,7 +435,7 @@ body > footer > picture > img {
 
 /* Media queries for XS & XXS screens */
 
-@media (max-width: 319px) {
+@media (width < 320px) {
   h1 {
     font-size: 2.25rem;
   }
@@ -459,7 +476,7 @@ body > footer > picture > img {
   }
 }
 
-@media (max-width: 200px) {
+@media (width < 200px) {
   html {
     font-size: 50%;
   }
@@ -467,9 +484,179 @@ body > footer > picture > img {
   img:not(a > img) {
     width: 100%;
   }
+}
 
-  body > footer > article > footer a > img {
-    width: 32px;
-    height: 32px;
+/* Media query for landscape screens */
+@media (orientation: landscape) {
+  body > header,
+  body > footer {
+    height: 100vh;
+    height: 100svh;
+  }
+}
+
+/* Media query for screens wider than mobile screens */
+@media (width > 600px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body > header,
+  body > main {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  body > header::before {
+    clip-path: polygon(0 0, 100% 0, 100% 40%, 0 80%);
+  }
+
+  .personal-info {
+    box-shadow: var(--card-box-shadow);
+  }
+
+  .about-head {
+    margin: 0;
+  }
+
+  body > main {
+    padding-bottom: 6rem;
+    margin-bottom: 10rem;
+  }
+
+  .my-work-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .my-work-head {
+    text-align: left;
+  }
+
+  body > footer {
+    padding: 3rem 3rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr min(50vw, 50vh, 50%);
+    align-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  body > footer > article {
+    padding: 0;
+  }
+
+  body > footer > article > header > h2 {
+    text-align: left;
+  }
+
+  body > footer > article .personal-accounts {
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  body > footer > picture > img {
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    object-position: 42.5% 0;
+  }
+}
+
+/* Media query for tablet screens */
+@media (600px < width < 1200px) {
+  .personal-info {
+    padding: 2rem;
+    margin-top: 7.5rem;
+  }
+
+  .personal-info .name {
+    text-align: initial;
+    left: 3rem;
+    bottom: calc(100% + 3rem);
+    z-index: 1;
+    padding: 0;
+    background: none;
+    text-wrap: nowrap;
+    color: #000;
+  }
+
+  .personal-info .personal-img {
+    margin: 1rem;
+    margin-bottom: 0;
+    width: 80px;
+    float: left;
+    transform-origin: right bottom;
+    transform: scale(2);
+  }
+
+  .about-head {
+    position: relative;
+    top: 1.5rem;
+  }
+
+  .about-content {
+    padding-top: 1.5rem;
+  }
+
+  .personal-info .personal-accounts {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    justify-items: end;
+  }
+
+  body > main {
+    clear: both;
+  }
+}
+
+/* Media query for wide screens (monitor) */
+@media (width >= 1200px) {
+  body {
+    max-width: 1024px;
+  }
+
+  body > header::before {
+    clip-path: polygon(0 0, 100% 0, 100% 20%, 0 70%);
+  }
+
+  .personal-info {
+    padding: 0;
+    padding-right: 2rem;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 2rem;
+  }
+
+  .personal-info header {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    width: 80%;
+    transform-origin: left center;
+    transform: scale(1.25);
+  }
+
+  .personal-info main {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    width: 100%;
+    align-self: end;
+    margin-top: 3rem;
+    margin-right: 2rem;
+  }
+
+  .personal-info footer {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: end;
+    align-self: end;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+  }
+
+  .about-head {
+    text-align: left;
   }
 }
