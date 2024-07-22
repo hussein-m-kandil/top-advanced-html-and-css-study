@@ -199,7 +199,7 @@
 
 :root {
   /* --accent-color: hsl(197, 75%, 35%); */
-  --accent-color: hsl(50, 100%, 50%);
+  --accent-color: hsl(45, 100%, 50%);
   --secondary-font-color: #555;
   --card-box-shadow: 2px 2px 3px 0 #0002;
 }
@@ -234,16 +234,16 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 4.25rem;
   font-weight: normal;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 a,
@@ -303,7 +303,7 @@ body > header::before {
   text-align: right;
   color: #fff;
   background: linear-gradient(0deg, #000, transparent);
-  text-shadow: 2px 2px 3px #0005;
+  text-shadow: 1.5px 1.5px 2px #0005;
   padding: 2rem 1rem 0;
   position: absolute;
   margin: 0;
@@ -323,7 +323,7 @@ body > header::before {
 }
 
 .about-content {
-  margin: 0.75rem 0 0.5rem;
+  margin: 1rem 0;
   font-size: 1.35rem;
   line-height: 1.5;
   color: var(--secondary-font-color);
@@ -337,8 +337,9 @@ body > header::before {
 }
 
 .personal-accounts {
-  width: max-content;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .personal-accounts a:not(:last-of-type) {
@@ -389,9 +390,15 @@ body > header::before {
 }
 
 body > footer {
+  height: 100vh;
+  min-height: 480px;
+}
+
+body > footer {
   position: relative;
   max-height: 100vh;
-  max-height: 100svh;
+  display: grid;
+  align-items: end;
 }
 
 body > footer::before {
@@ -406,7 +413,7 @@ body > footer::before {
 }
 
 body > footer > article {
-  padding: 1rem;
+  padding: 1rem 1rem 2rem;
 }
 
 body > footer > article > header > h2 {
@@ -425,7 +432,7 @@ body > footer > article > main > p:first-of-type {
 }
 
 body > footer > article > main > p > img {
-  margin: 0 0.25rem;
+  margin-right: 0.25rem;
 }
 
 body > footer > picture > img {
@@ -488,10 +495,8 @@ body > footer > picture > img {
 
 /* Media query for landscape screens */
 @media (orientation: landscape) {
-  body > header,
-  body > footer {
-    height: 100vh;
-    height: 100svh;
+  body > header {
+    max-height: 720px;
   }
 }
 
@@ -501,6 +506,19 @@ body > footer > picture > img {
     overflow-x: hidden;
   }
 
+  h1 {
+    font-size: 2.25rem;
+    font-weight: normal;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
   body > header,
   body > main {
     margin-left: 2rem;
@@ -508,7 +526,7 @@ body > footer > picture > img {
   }
 
   body > header::before {
-    clip-path: polygon(0 0, 100% 0, 100% 40%, 0 80%);
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 90%);
   }
 
   .personal-info {
@@ -552,14 +570,14 @@ body > footer > picture > img {
   }
 
   body > footer > article .personal-accounts {
-    margin: 0;
     margin-bottom: 0.5rem;
+    justify-content: flex-start;
   }
 
   body > footer > picture > img {
     aspect-ratio: 2 / 3;
     object-fit: cover;
-    object-position: 42.5% 0;
+    object-position: 40% 0;
   }
 }
 
@@ -572,7 +590,7 @@ body > footer > picture > img {
 
   .personal-info .name {
     text-align: initial;
-    left: 3rem;
+    left: 4rem;
     bottom: calc(100% + 3rem);
     z-index: 1;
     padding: 0;
@@ -588,6 +606,7 @@ body > footer > picture > img {
     float: left;
     transform-origin: right bottom;
     transform: scale(2);
+    box-shadow: 1px 1px 2px 0 #0003;
   }
 
   .about-head {
@@ -601,9 +620,7 @@ body > footer > picture > img {
 
   .personal-info .personal-accounts {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    justify-items: end;
+    justify-content: flex-end;
   }
 
   body > main {
@@ -618,7 +635,7 @@ body > footer > picture > img {
   }
 
   body > header::before {
-    clip-path: polygon(0 0, 100% 0, 100% 20%, 0 70%);
+    clip-path: polygon(0 0, 100% 0, 100% 25%, 0 75%);
   }
 
   .personal-info {
